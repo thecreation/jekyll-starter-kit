@@ -93,9 +93,9 @@ export default {
     source: 'site',
     build: 'dest',
     config: {
-      base: "site/_config.yml",
-      development: "site/_config_dev.yml",
-      production:  "site/_config_prod.yml"
+      base: "_config.yml",
+      development: "_config_dev.yml",
+      production:  "_config_prod.yml"
     }
   },
 

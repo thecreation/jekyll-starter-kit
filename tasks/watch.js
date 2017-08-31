@@ -23,7 +23,7 @@ gulp.task('watch:svgs', () => {
 
 gulp.task('watch:html', () => {
   gulp.watch(
-    ['site/**/*', 'config.js'],
+    ['site/**/*', 'config.js', '_config.yml', '_config_dev.yml', '_config_prod.yml'],
     gulp.series('jekyll', function(done) {
       browser.notify('Rebuilded Jekyll');
       browser.reload();

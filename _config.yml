@@ -1,9 +1,10 @@
 # Site settings
+lang:                en
 title:               Lanyon
 tagline:             'A Jekyll theme'
 description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 'http://yoursite.com'
-baseurl:             ''
+url:                 'http://localhost:4000'
+baseurl:             '' # the subpath of your site, e.g. /blog
 permalink:           :categories/:title.html
 paginate:            5
 #permalink:           pretty
