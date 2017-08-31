@@ -12,12 +12,18 @@ if (config.production) {
 }
 requiredir('./tasks');
 
-gulp.task('html', gulp.series('jekyll', gulp.parallel('server', 'watch')));
+gulp.task('html', gulp.series('jekyll:drafts', gulp.parallel('server', 'watch')));
 gulp.task(
   'assets',
   gulp.parallel('copy', 'vendor', 'styles', 'scripts', 'images', 'sprite', 'svgs', 'favicons')
 );
-gulp.task('build', gulp.series('clean', 'assets', 'jekyll', 'usemin'));
+
+if(config.production) {
+  gulp.task('build', gulp.series('clean', 'assets', 'jekyll', 'usemin'));
+} else {
+  gulp.task('build', gulp.series('assets', 'jekyll:drafts'));
+}
+
 gulp.task('dev', gulp.series('build', gulp.parallel('server', 'watch')));
 gulp.task('default', gulp.series('dev'));
 
