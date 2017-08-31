@@ -25,6 +25,7 @@ gulp.task('usemin', () => {
               config.production,
               usemin({
                 // see https://www.npmjs.com/package/gulp-usemin
+                // path: config.html.build,
                 css: [cssnano()],
                 js: [uglify()],
                 html: [htmlmin({
@@ -35,7 +36,7 @@ gulp.task('usemin', () => {
                   minifyCSS: true,
                   minifyJS: true,
                   collapseBooleanAttributes: true,
-                  removeAttributeQuotes: true,
+                  removeAttributeQuotes: false,
                 })],
               })
             )
