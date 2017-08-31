@@ -2,6 +2,15 @@
 layout: default
 title: Home
 ---
+{% include icon.html icon="facebook" %}
+
+<h2>Data from sample json file</h2>
+
+<ul>
+  {% for sample in site.data.sample %}
+    <li>{{ sample.food }}</li>
+  {% endfor %}
+</ul>
 
 <div class="posts">
   {% for post in paginator.posts %}

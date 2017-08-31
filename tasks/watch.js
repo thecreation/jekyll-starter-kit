@@ -17,6 +17,10 @@ gulp.task('watch:images', () => {
   gulp.watch(`${config.images.source}/**/*`, gulp.series('images'));
 });
 
+gulp.task('watch:sprite', () => {
+  gulp.watch(`${config.sprite.source}/**/*`, gulp.series('sprite'));
+});
+
 gulp.task('watch:svgs', () => {
   gulp.watch(`${config.svgs.source}/**/*`, gulp.series('svgs'));
 });

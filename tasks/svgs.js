@@ -9,7 +9,7 @@ import notify from 'gulp-notify';
 
 gulp.task('svgs', () => {
   return gulp
-    .src(`${config.svgs.source}/**/*`)
+    .src(`${config.svgs.source}/**/*.svg`)
     .pipe(changed(`${config.svgs.build}`))
     .pipe(
       plumber({errorHandler: notify.onError('Error: <%= error.message %>')})
@@ -33,7 +33,7 @@ gulp.task('svgs', () => {
       })
     )
     .pipe(plumber.stop())
-    .pipe(gulp.dest(`${config.svgs.build}`))
+    .pipe(gulp.dest(config.svgs.build))
     .pipe(browser.stream())
     .pipe(
       gulpif(
