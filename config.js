@@ -19,12 +19,12 @@ export default {
   root: __dirname,
   paths: {
     source: 'src',
-    build: 'dest'
+    build: 'dist'
   },
 
   assets: {
     source: 'src/assets',
-    build: 'dest/assets'
+    build: 'dist/assets'
   },
 
   enable: {
@@ -39,7 +39,7 @@ export default {
 
   styles: {
     source: 'src/styles',
-    build: 'dest/assets/styles',
+    build: 'dist/assets/styles',
     include: [
       // 'node_modules'
     ]
@@ -48,40 +48,40 @@ export default {
   scripts: {
     bundler: 'webpack', // rollup, webpack, default
     source: 'src/scripts',
-    build: 'dest/assets/scripts'
+    build: 'dist/assets/scripts'
   },
 
   fonts: {
     source: 'src/fonts',
-    build: 'dest/assets/fonts'
+    build: 'dist/assets/fonts'
   },
 
   sprite: {
     name: 'sprite.svg',
     source: 'src/sprite',
-    build: 'dest/assets/svgs'
+    build: 'dist/assets/svgs'
   },
 
   svgs: {
     source: 'src/svgs',
-    build: 'dest/assets/svgs'
+    build: 'dist/assets/svgs'
   },
 
   images: {
     source: 'src/images',
-    build: 'dest/assets/images'
+    build: 'dist/assets/images'
   },
 
   favicons: {
     path: '{{ site.baseurl }}assets/favicons/',
     source: 'src/favicons',
-    build: 'dest/assets/favicons',
+    build: 'dist/assets/favicons',
     html: 'site/_includes/favicons.html'
   },
 
   vendor: {
     manifest: 'manifest.json',
-    dest: 'dest/assets/vendor',
+    dest: 'dist/assets/vendor',
     flattenPackages: false,
     paths: {
       css: '${dest}/${package}/${file}',
@@ -91,13 +91,13 @@ export default {
   },
 
   archive: {
-    source: 'dest/**/*',
+    source: 'dist/**/*',
     build: 'archives'
   },
 
   html: {
     source: 'site',
-    build: 'dest',
+    build: 'dist',
     config: {
       base: "_config.yml",
       development: "_config_dev.yml",
